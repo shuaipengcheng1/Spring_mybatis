@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.misaka.dao.StudentDao">
+  <resultMap id="StudentMap" type="com.misaka.domain.Stu">
+    <id column="id" property="stuid"></id>
+    <result column="user" property="stuname"></result>
+    <result column="password" property="stupassword"></result>
+  </resultMap>
+    <select id="SelectStudent" resultMap="StudentMap">
+        select *
+        from user
+
+  </select>
+</mapper>

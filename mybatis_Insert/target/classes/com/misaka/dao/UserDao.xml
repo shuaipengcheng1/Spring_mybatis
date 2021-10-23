@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.misaka.domain.User">
+<!--    #{} 占位符 标识传入的对象 里面的字符串 就是要使用的对象的属性-->
+   <insert id="Insert">
+   INSERT into user (user,password) values (#{user},#{password})
+   </insert>
+</mapper>

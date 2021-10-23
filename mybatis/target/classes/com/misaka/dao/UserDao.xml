@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.misaka.dao.UserDao">
+    <select id="SelectUser" resultType="com.misaka.domain.User">
+/* id 标识查询方法 mybatis会通过该id查到该sql语句 一般名称设为接口中的方法名*/
+/*resultType 这条语句转为的java对象的类型  一般写要转为的对象的全称*/
+        select id,user,password from user order by id
+    </select>
+</mapper>
+
+
+<!--
+sql 映射文件 是用来写 sql语句的 mybatis会执行这些sql语句
+
+ 1 指定约束文件
+ <!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   约束文件的作用:限制和检查 当前文件中出现的标签和属性必须符合mybatis的要求
+
+ 2 mapper 是当前的文件的根标签
+    namespace 叫做命名空间 一般使用接口的全限定名称
+ 3 select 标识查询
+ 4 update 标识更新
+ 5 insert 标识插入
+ 6 delete 标识删除
+
+-->

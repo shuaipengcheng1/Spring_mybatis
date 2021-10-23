@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--  通知Spring创建对象-->
+    <bean class="com.misaka.Di赋值.imp.com.misaka.SomeServiceImpl" id="com.misaka.SomeService"/>
+<!--    创建日期对象-->
+    <bean class="java.util.Date" id="date"/>
+</beans>

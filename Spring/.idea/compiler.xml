@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring_Ioc_HOMEWORK" />
+        <module name="Spring_Web_Retest" />
+        <module name="Spring_Mybatis_Retest" />
+        <module name="Spring_Goods_Project" />
+        <module name="Spring_More_Config_File" />
+        <module name="Spring_Aop_Retest2" />
+        <module name="Spring" />
+        <module name="Spring_Goods_ProjectAop" />
+        <module name="Spring_AOP_Retest" />
+        <module name="Spring_A" />
+        <module name="Spring_Aop" />
+        <module name="Spring_Di" />
+        <module name="Spring_Servlet" />
+        <module name="Spring_anno" />
+        <module name="Spring_Day2_Retest" />
+        <module name="Spring_Retest" />
+        <module name="Spring_Mybatis" />
+        <module name="Spring_Di_Retest" />
+        <module name="Spring_Aop_LastRetest" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring_Web" target="1.7" />
+      <module name="Spring_多配置文件" target="8" />
+      <module name="web_Spring" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ServerContext:war">
+    <output-path>$PROJECT_DIR$/../ServerContext/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ServerContext</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ServerContext-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ServerContext:war exploded" />
+    </root>
+  </artifact>
+</component>

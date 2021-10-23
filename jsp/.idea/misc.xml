@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../FileterTest" />
+    <file type="web" url="file://$PROJECT_DIR$" />
+    <file type="web" url="file://$PROJECT_DIR$/../request_Share" />
+    <file type="web" url="file://$PROJECT_DIR$/../Request_ShareData" />
+    <file type="web" url="file://$PROJECT_DIR$/../RequestObjecy_ShareData" />
+    <file type="web" url="file://$PROJECT_DIR$/../ServerContext" />
+    <file type="web" url="file://$PROJECT_DIR$/../SevletContext_Listener" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../ServerContext/pom.xml" />
+        <option value="$PROJECT_DIR$/../request_Share/pom.xml" />
+        <option value="$PROJECT_DIR$/../SevletContext_Listener/pom.xml" />
+        <option value="$PROJECT_DIR$/../FileterTest/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

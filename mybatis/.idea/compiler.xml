@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mybatis_resultMap" />
+        <module name="mybatis_proxy_retest" />
+        <module name="mybatis_Proxy" />
+        <module name="mybatis" />
+        <module name="mybatis_parmas" />
+        <module name="mybatis_Param_Retest" />
+        <module name="Mybatis_Use_DAO" />
+        <module name="mybatis_Insert" />
+        <module name="mybatis_MoveMent_Sql" />
+        <module name="mybatis_pageHelper" />
+        <module name="mybatis_Retest" />
+        <module name="mybatis_Utill_pack" />
+        <module name="mybatis_foreach" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.misaka.Dao.GoodsDao">
+    <select id="SelectGoods" resultType="com.misaka.Domain.Goods">
+        select *
+        from goods
+        where id = #{arg0}
+  </select>
+   <select id="amount" resultType="int">
+     SELECT amount from goods where id = #{arg0}
+   </select>
+   <update id="Update">
+       UPDATE goods SET amount =amount- ${arg0} WHERE id =${arg1}
+   </update>
+</mapper>

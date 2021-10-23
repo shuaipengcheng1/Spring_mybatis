@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FileterTest:war">
+    <output-path>$PROJECT_DIR$/../FileterTest/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>FileterTest</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="FileterTest-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="FileterTest:war exploded" />
+    </root>
+  </artifact>
+</component>

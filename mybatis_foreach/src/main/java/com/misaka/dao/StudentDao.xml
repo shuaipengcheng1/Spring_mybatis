@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.misaka.dao.StudentDao">
+<!--    赋值映射-->
+  <resultMap id="StudentSelectMap" type="com.misaka.domain.Stu">
+    <id column="id" property="Stu_id"></id>
+    <result column="password" property="Stu_password"></result>
+    <result column="user" property="Stu_name"></result>
+  </resultMap>
+<!--    sql代码片段 id为使用的标识-->
+<sql id="name">
+    SELECT * from user where id in
+</sql>
+<!--  插入-->
+  <insert id="Insert">
+     INSERT into user (password,user) values (#{Stu_password},#{Stu_name})
+  </insert>
+
+<!--  查询所有-->
+  <select id="SelectStu" resultMap="StudentSelectMap">
+SELECT * FROM user order by id
+  </select>
+
+<!--  查询一个集合的值 通过foreach循环-->
+  <select id="SelectList" resultMap="StudentSelectMap">
+    SELECT * from user where id in
+   <foreach collection="list" close=")" item="item" open="(" separator=",">
+        #{item}
+   </foreach>
+
+
+  </select>
+
+<!--    查询对象集合-->
+    <select id="SelectList_Stu" resultMap="StudentSelectMap">
+       <include refid="name"></include>
+   <foreach collection="list" open="(" close=")" separator="," item="item">
+       #{item.Stu_id}
+   </foreach>
+    </select>
+
+</mapper>

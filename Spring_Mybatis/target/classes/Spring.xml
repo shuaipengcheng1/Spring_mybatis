@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="classpath:dataResourse.properties"/>
+<!--    声明数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+    <property name="url" value="${url}"/>
+    <property name="username" value="root"/>
+    <property name="password" value="spc652324"/>
+ </bean>
+<!--    创建spring-mybatis中提供的SqlSessionFactoryBean类 这个类中创建了SqlSessionFactory类 用于获取SqlSession-->
+    <bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+<!--        通过set注入把数据库链接池的信息赋值给dataSource-->
+         <property name="dataSource" ref="dataSource"/>
+<!--    给一个主配置文件位置-->
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+     </bean>
+<!--在内部直接创建Dao对象-->
+    <bean id="Dao" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<!--   指定SqlSessionFactory对象的bean-->
+        <property name="sqlSessionFactoryBeanName" value="SqlSessionFactory"/>
+<!--  指定一个包名 包名是这个dao接口的所在包 然后该对象会扫描整个包的所有接口 都执行一次getMapper
+       然后底层会将其获取到的dao对象 放入spring的容器中 -->
+        <property name="basePackage" value="com.misaka.Dao"/>
+    </bean>
+
+<!--    在内部创建Service对象-->
+    <bean id="Service" class="com.misaka.UserService.Impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+</beans>

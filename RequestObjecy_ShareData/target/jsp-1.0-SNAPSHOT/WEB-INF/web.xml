@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+<!--    将sevlet实现类路径给Tomcat -->
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.example.jsp.HelloServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ResServlet</servlet-name>
+        <servlet-class>com.example.jsp.ResServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>com.example.jsp.Test</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletRedirect</servlet-name>
+        <servlet-class>com.example.jsp.ServletRedirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletRedirect</servlet-name>
+        <url-pattern>/redirect</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/Test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResServlet</servlet-name>
+        <url-pattern>/res</url-pattern>
+    </servlet-mapping>
+    <!--    为当前的实现类提供别名-->
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+<!--        路径-->
+        <url-pattern>/hello</url-pattern>
+
+    </servlet-mapping>
+
+
+</web-app>

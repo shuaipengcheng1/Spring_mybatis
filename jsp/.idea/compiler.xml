@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ServerContext" />
+        <module name="request_Share" />
+        <module name="SevletContext_Listener" />
+        <module name="jsp" />
+        <module name="FileterTest" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="FileterTest" target="1.8" />
+      <module name="jsp" target="1.8" />
+      <module name="onlineTest" target="1.8" />
+      <module name="request_Share" target="1.8" />
+      <module name="Request_ShareData" target="1.8" />
+      <module name="RequestObjecy_ShareData" target="1.8" />
+      <module name="RequestSevlet_ShareData" target="1.8" />
+      <module name="ServerContext" target="1.8" />
+      <module name="SevletContext_Listener" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

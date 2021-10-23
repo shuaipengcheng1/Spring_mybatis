@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <!--    创建数据链接池-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="url" value="jdbc:mysql://localhost:3306/goods_sale"/>
+        <property name="username" value="root"/>
+        <property name="password" value="spc652324"/>
+
+    </bean>
+    <!--  创建mysql事务处理-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--        1 链接数据库-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--创建事务管理对象-->
+    <tx:advice transaction-manager="transactionManager" id="interceptor">
+        <tx:attributes>
+            <!--            name 要使用事务的方法名字 还可以使用通配符 -->
+            <tx:method name="bu*" isolation="DEFAULT"
+                       rollback-for="com.misaka.Exep.RollbackException,java.lang.NullPointerException"
+                       read-only="false"/>
+        </tx:attributes>
+    </tx:advice>
+    <!--    配置aop-->
+    <aop:config>
+        <!--        配置切入点表达式
+            id 为唯一值-->
+        <aop:pointcut id="BuyPointCut" expression="execution(* *..Service..*.*(..))"/>
+        <!--    配置增强器 关联切入点表达式 和 tx:advice-->
+        <aop:advisor advice-ref="interceptor" pointcut-ref="BuyPointCut"/>
+    </aop:config>
+    <!--    创建sqlsessionFactoryBean-->
+    <bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--    创建dao对象-->
+    <bean id="Dao" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="SqlSessionFactory"/>
+        <property name="basePackage" value="com.misaka.Dao"/>
+    </bean>
+    <!--    将dao赋值给Service类 并且创建对象-->
+    <bean id="BuyService" class="com.misaka.Service.GoodeServiceImpl">
+        <property name="goodsDao" ref="goodsDao"/>
+        <property name="orderDao" ref="orderDao"/>
+    </bean>
+
+</beans>

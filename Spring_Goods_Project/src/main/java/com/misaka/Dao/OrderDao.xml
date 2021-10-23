@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.misaka.Dao.OrderDao">
+    <select id="SelectOrder" resultType="com.misaka.Domain.Order">
+        select *
+        from order
+       order by id
+  </select>
+  <insert id="InsertOrder" >
+      INSERT INTO `order` (gid,nums) values (#{gid},#{nums})
+  </insert>
+</mapper>

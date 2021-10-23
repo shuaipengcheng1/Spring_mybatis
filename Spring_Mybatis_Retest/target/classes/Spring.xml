@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.misaka"/>
+    <!--获取属性文件-->
+    <context:property-placeholder location="classpath:Database.properties"/>
+    <!--   创建链接池-->
+    <!--    声明数据源-->
+    <bean id="druid" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="url" value="${url}"/>
+        <property name="username" value="root"/>
+        <property name="password" value="spc652324"/>
+    </bean>
+<!--    创建SqlSessionFactoryBean对象-->
+    <bean id="sql" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="druid"/>
+        <!--    给一个主配置文件位置-->
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+    </bean>
+
+<!--    创建Sqlsession对象-->
+    <bean id="SqlSession" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--        SqlSessionFactoryBean对象的id-->
+        <property name="sqlSessionFactoryBeanName" value="sql"/>
+<!--        会扫描该包中的所有接口 并且创建dao对象(SqlSession.getMapper()) 命名为小写接口首字母 并且将其存入spring容器-->
+        <property name="basePackage" value="com.misaka.Dao"/>
+
+
+    </bean>
+<!--    创建事务对象-->
+<!--    <bean id="UserService" class="com.misaka.UserService.UserServiceImpl">-->
+<!--        <property name="userDao" ref="userDao"/>-->
+<!--    </bean>-->
+
+
+</beans>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--    环境的根标签 数据库的配置信息 这里的default标识mybatis当前使用的环境 要和某一个的环境id属性相同-->
+    <environments default="development">
+<!--        一个数据库的环境 id是环境名称-->
+        <environment id="development">
+<!--            配置事务类型
+               JDBC 使用commit和rollback处理事务-->
+            <transactionManager type="JDBC"/>
+<!--            数据源头 type标识类型-->
+            <dataSource type="POOLED">
+<!--                数据库驱动-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+<!--                地址-->
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+<!--                用户名-->
+                <property name="username" value="root"/>
+<!--                密码-->
+                <property name="password" value="spc652324"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+<!--        指定sql映射 执行sql语句 下面是taget/calss的下的路径-->
+        <mapper resource="com/misaka/dao/UserDao.xml"/>
+<!--        mapper可以写多个-->
+    </mappers>
+</configuration>
+
+
+<!--
+mybatis 主配置文件
+ 主要有 数据库的配置信息
+
+ 1 mybatis 约束文件
+ <!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+ 2      <configuration> 根标签
+
+-->

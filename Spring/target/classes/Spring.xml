@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--       Spring 配置文件-->
+
+<!--    告诉Spring 创建对象
+      id 标识符 Spring通过这个 获取对象
+       class 类的全限定名称(不能是接口 因为底层是反射机制)
+      -->
+    <bean id="com.misaka.SomeService" class="com.misaka.Service.imp.com.misaka.SomeServiceImpl"/>
+</beans>

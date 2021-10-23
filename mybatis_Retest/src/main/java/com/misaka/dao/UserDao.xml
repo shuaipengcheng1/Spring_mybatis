@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--限制-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--sql映射-->
+<mapper namespace="com.misaka.domain.User">
+
+<!--    定义一个hashmap id为自定义名称 标识
+          type 为java对象的全路径名称-->
+    <resultMap id="UserMap" type="com.misaka.domain.User">
+<!--        column 是列名-->
+<!--        property 是对象属性名-->
+        <id column="id" property="id"></id>
+<!--        上面的意思为 数据库的id列的值 赋值给 User.id属性-->
+        <result column="" property=""></result>
+<!--        上面的result标签为非主键-->
+    </resultMap>
+    <select id="SelectUser" resultType="com.misaka.domain.User">
+       SELECT  * from user order by id;
+    </select>
+</mapper>

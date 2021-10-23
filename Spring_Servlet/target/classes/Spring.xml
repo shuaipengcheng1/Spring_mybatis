@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--创建druid-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="password" value="spc652324"/>
+        <property name="username" value="root"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+    </bean>
+<!--    创建SqlFactory-->
+    <bean id="SqlSesstionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+    </bean>
+<!--    创建dao-->
+    <bean id="Dao" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.misaka.Dao"/>
+        <property name="sqlSessionFactoryBeanName" value="SqlSesstionFactory"/>
+    </bean>
+<!--    创建Service对象-->
+    <bean id="LoginService" class="com.misaka.Service.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+</beans>

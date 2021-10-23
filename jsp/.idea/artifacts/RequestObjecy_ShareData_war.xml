@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="RequestObjecy_ShareData:war">
+    <output-path>$PROJECT_DIR$/../RequestObjecy_ShareData/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>RequestObjecy_ShareData</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="RequestObjecy_ShareData-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="RequestObjecy_ShareData:war exploded" />
+    </root>
+  </artifact>
+</component>

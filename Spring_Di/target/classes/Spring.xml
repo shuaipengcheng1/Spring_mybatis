@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+ <bean id="Student" class="com.misaka.Di赋值.Student">
+  <property name="name" value="misaka"/>
+  <property name="age" value="18"/>
+ <property name="school" ref="School"/>
+  </bean>
+ <bean id="School" class="com.misaka.Di赋值.School">
+  <property name="name" value="cdj"/>
+ </bean>
+ <bean id="Home" class="com.misaka.Di赋值.Home">
+  <constructor-arg ref="School" name="school"/>
+  <constructor-arg ref="Student" name="student"/>
+ </bean>
+<!-- set注入 Spring调用Set方法-->
+<!-- Spring的简单类型 就是java的基本数据类型和String-->
+<!-- 语法
+      <bean id="x" class="">
+           <property name="属性名" value="属性值"/>
+            <property name="属性名" value="属性值"/>
+           <property name="属性名" value="属性值"/>
+
+       </bean>-->
+
+</beans>

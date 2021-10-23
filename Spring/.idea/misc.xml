@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../Spring_Servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/../Spring_Web" />
+    <file type="web" url="file://$PROJECT_DIR$/../Spring_Web_Retest" />
+    <file type="web" url="file://$PROJECT_DIR$/../web_Spring" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Retest/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Di/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Di_Retest/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_More_Config_File/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_anno/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Day2_Retest/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Ioc_HOMEWORK/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Aop/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_A/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_AOP_Retest/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Aop_Retest2/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Aop_LastRetest/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Mybatis_Retest/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Goods_Project/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Goods_ProjectAop/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Web_Retest/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
