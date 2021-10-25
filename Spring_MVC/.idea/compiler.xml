@@ -8,7 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Spring_MVC_First" />
         <module name="Spring_MVC" />
+        <module name="Spring_mvc_Retest" />
+        <module name="Spring_MVC_Return_JSON" />
+        <module name="Spring_Retest2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SpringMvc_Retest2" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

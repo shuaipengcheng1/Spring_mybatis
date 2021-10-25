@@ -3,12 +3,19 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/../Spring_MVC_First" />
+    <file type="web" url="file://$PROJECT_DIR$/../Spring_mvc_Retest" />
+    <file type="web" url="file://$PROJECT_DIR$/../Spring_MVC_Return_JSON" />
+    <file type="web" url="file://$PROJECT_DIR$/../Spring_Retest2" />
+    <file type="web" url="file://$PROJECT_DIR$/../SpringMvc_Retest2" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../Spring_MVC_First/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_mvc_Retest/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Retest2/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_MVC_Return_JSON/pom.xml" />
       </list>
     </option>
   </component>
