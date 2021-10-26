@@ -1,5 +1,8 @@
 package com.misaka.controller;
 
+import com.misaka.Service.SelectUser;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,18 +27,11 @@ public class MyController {
 //创建返回值为json
     @ResponseBody
     public List dosome(@RequestParam("username") String name) {
-        List list = new ArrayList();
-        list.add(name);
+
 //        从spring容器中取出
-        WebApplicationContext applicationContext = null;
-        applicationContext= WebApplicationContextUtils.getRequiredWebApplicationContext(new javax.servlet.GenericServlet() {
-            @Override
-            public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring.xml");
+       SelectUser selectUser = (SelectUser)applicationContext.getBean("SelectUser");
 
-            }
-        }.getServletContext());
-
-        applicationContext.getBean("");
-        return list;
+        return selectUser.SelectUser();
     }
 }
