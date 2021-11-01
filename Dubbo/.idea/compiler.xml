@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="005-Reciv" />
         <module name="Public_Test" />
+        <module name="005-Public" />
         <module name="Recive" />
+        <module name="005-Provider" />
+        <module name="Last_Provider" />
+        <module name="Last_Cosumer" />
         <module name="Dubbo" />
         <module name="Public" />
         <module name="Provider" />
@@ -16,6 +21,7 @@
     <bytecodeTargetLevel>
       <module name="Dubbo消费者" target="8" />
       <module name="Dubbo直连" target="8" />
+      <module name="Last_InterFace_Factory" target="1.7" />
       <module name="Public-Test" target="1.5" />
       <module name="消费者" target="1.7" />
       <module name="直连项目" target="1.7" />

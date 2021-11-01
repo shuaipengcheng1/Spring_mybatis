@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+<!--唯一值-->
+    <dubbo:application name="UserServiceImpl"/>
+<!--    协议-->
+    <dubbo:protocol port="20880" name="dubbo"/>
+<!--    指定注册中心的端口号 地址-->
+    <dubbo:registry address="zookeeper://localhost:2181"/>
+<!--    暴露接口-->
+    <dubbo:service  interface="com.cdmisaka.Service.UserService" ref="userServiceImpl"  timeout="30000"/>
+</beans>

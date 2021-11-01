@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+<!--唯一值-->
+    <dubbo:application name="Provider"/>
+<!--    接口协议 端口-->
+    <dubbo:protocol name="dubbo" port="20880"/>
+<!--    zookeeper-->
+    <dubbo:registry address="zookeeper://localhost:2181"/>
+
+<!--    暴露 并且设为第一个版本 一个接口有多个实现类 他们的区分可以使用Version属性区分-->
+    <dubbo:service interface="com.last.Service.UserService" ref="userServiceImpl" version="1.0.0" timeout="30000"/>
+</beans>
