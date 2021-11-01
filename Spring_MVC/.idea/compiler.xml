@@ -7,13 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Spring_MVC_First" />
-        <module name="Spring_MVC" />
         <module name="Spring_mvc_Retest" />
+        <module name="Spring_Last" />
+        <module name="Spring_MVC-Return_json" />
+        <module name="HandlerInterceptor" />
+        <module name="Spring_MVC" />
         <module name="Spring_MVC_Return_JSON" />
+        <module name="SSM" />
         <module name="Spring_Retest2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Spring_MVC_Return_JSON_Retest" target="1.5" />
       <module name="SpringMvc_Retest2" target="1.5" />
     </bytecodeTargetLevel>
   </component>

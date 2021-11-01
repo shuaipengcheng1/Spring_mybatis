@@ -5,7 +5,7 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 <!--sprimg_mvc扫描器-->
-    <context:component-scan base-package="com.misaka.controller"/>
+    <context:component-scan base-package="com.misaka2.controller"/>
 <!--    注解驱动-->
     <mvc:annotation-driven/>
 <!--    静态转发器-->
@@ -26,11 +26,11 @@
     <!--    创建Dao-->
     <bean id="Dao" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--        等于 sqlsession.getMapper(xxxdao.class)-->
-        <property name="basePackage" value="com.misaka.Dao"/>
+        <property name="basePackage" value="com.misaka2.Dao"/>
         <property name="sqlSessionFactoryBeanName" value="SqlSession"/>
     </bean>
     <!--    创键服务对象 Service-->
-    <bean id="SelectUser" class="com.misaka.Service.SelectUserImpl">
-        <property name="userDao" ref="userDao"/>
+    <bean id="SelectUser" class="com.misaka2.Service.SelectUserImpl">
+        <property name="userDao1" ref="userDao1"/>
     </bean>
 </beans>

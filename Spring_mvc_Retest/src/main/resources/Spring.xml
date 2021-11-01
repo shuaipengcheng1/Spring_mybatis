@@ -4,7 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd " default-lazy-init="true">
 <!--Springmvc配置文件-->
-    <context:component-scan base-package="com.misaka.controller"/>
+    <context:component-scan base-package="com.misaka2.controller"/>
 <!--    声明视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 <!--    前缀 视图文件的路径-->

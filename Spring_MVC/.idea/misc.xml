@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../Redirect_forward" />
+    <file type="web" url="file://$PROJECT_DIR$/../Spring_Last" />
+    <file type="web" url="file://$PROJECT_DIR$/../Spring_MVC-Return_json" />
     <file type="web" url="file://$PROJECT_DIR$/../Spring_MVC_First" />
     <file type="web" url="file://$PROJECT_DIR$/../Spring_mvc_Retest" />
     <file type="web" url="file://$PROJECT_DIR$/../Spring_MVC_Return_JSON" />
+    <file type="web" url="file://$PROJECT_DIR$/../Spring_MVC_Return_JSON_Retest" />
     <file type="web" url="file://$PROJECT_DIR$/../Spring_Retest2" />
     <file type="web" url="file://$PROJECT_DIR$/../SpringMvc_Retest2" />
+    <file type="web" url="file://$PROJECT_DIR$/../SSM" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -16,6 +21,10 @@
         <option value="$PROJECT_DIR$/../Spring_mvc_Retest/pom.xml" />
         <option value="$PROJECT_DIR$/../Spring_Retest2/pom.xml" />
         <option value="$PROJECT_DIR$/../Spring_MVC_Return_JSON/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_MVC-Return_json/pom.xml" />
+        <option value="$PROJECT_DIR$/../SSM/pom.xml" />
+        <option value="$PROJECT_DIR$/../Redirect_forward/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring_Last/pom.xml" />
       </list>
     </option>
   </component>

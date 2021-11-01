@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<!--spring配置文件-->
+<!--  扫描器-->
+    <context:component-scan base-package="com.misaka.dubbo.Service,com.misaka.dubbo.Controller"/>
+<!--    创建链接池-->
+<bean id="DataSource" class="com.alibaba.druid.pool.DruidDataSource">
+    <property name="password" value="spc652324"/>
+    <property name="username" value="root"/>
+    <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+</bean>
+<!--    创建sqlsession-->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+        <property name="dataSource" ref="DataSource"/>
+    </bean>
+<!--    创建dao对象-->
+    <bean id="dao" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.misaka.dubbo.Dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSession"/>
+
+    </bean>
+
+</beans>

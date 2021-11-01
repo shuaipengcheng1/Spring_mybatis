@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+<!--消费者的名称 唯一性-->
+    <dubbo:application name="UseQueryUserById"/>
+<!--    引用远程服务接口
+     id 远程服务接口的代理对象名称
+     interface 你要调用的远程服务的接口的全限定类名
+       url 地址
+        register 注册中心 N/A 代表直连-->
+    <dubbo:reference interface="com.misaka.dubbo.Service.UserService" timeout="30000" url="dubbo://localhost:20880" registry="N/A" id="userServiceImpl"/>
+</beans>

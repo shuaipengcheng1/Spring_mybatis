@@ -21,11 +21,11 @@
     <!--    创建Dao-->
     <bean id="Dao" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--        等于 sqlsession.getMapper(xxxdao.class)-->
-        <property name="basePackage" value="com.misaka.Dao"/>
+        <property name="basePackage" value="com.misaka2.Dao"/>
         <property name="sqlSessionFactoryBeanName" value="SqlSession"/>
     </bean>
     <!--    创键服务对象 Service-->
-    <bean id="SelectUser" class="com.misaka.Service.SelectUserImpl">
-        <property name="userDao" ref="userDao"/>
+    <bean id="SelectUser" class="com.misaka2.Service.SelectUserImpl">
+        <property name="userDao1" ref="userDao1"/>
     </bean>
 </beans>
