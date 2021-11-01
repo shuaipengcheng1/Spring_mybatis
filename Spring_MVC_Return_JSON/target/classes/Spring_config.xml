@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<!--spring的配置文件-->
+
+    <!--    创建链接池对象-->
+    <bean id="Datasource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="password" value="spc652324"/>
+        <property name="username" value="root"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+
+    </bean>
+    <!--    创建sqlsession-->
+    <bean id="SqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="Datasource"/>
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+
+    </bean>
+    <!--    创建Dao-->
+    <bean id="Dao" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--        等于 sqlsession.getMapper(xxxdao.class)-->
+        <property name="basePackage" value="com.misaka2.Dao"/>
+        <property name="sqlSessionFactoryBeanName" value="SqlSession"/>
+    </bean>
+    <!--    创键服务对象 Service-->
+    <bean id="SelectUser" class="com.misaka2.Service.SelectUserImpl">
+        <property name="userDao1" ref="userDao1"/>
+    </bean>
+</beans>

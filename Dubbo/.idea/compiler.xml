@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Public_Test" />
+        <module name="Recive" />
+        <module name="Dubbo" />
+        <module name="Public" />
+        <module name="Provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Dubbo消费者" target="8" />
+      <module name="Dubbo直连" target="8" />
+      <module name="Public-Test" target="1.5" />
+      <module name="消费者" target="1.7" />
+      <module name="直连项目" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

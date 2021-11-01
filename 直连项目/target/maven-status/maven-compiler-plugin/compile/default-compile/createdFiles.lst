@@ -1,0 +1,5 @@
+com\misaka\dubbo\Service\UserServiceImpl.class
+com\misaka\dubbo\Controller\MyController.class
+com\misaka\dubbo\Dao\UserDao.class
+com\misaka\dubbo\Service\UserService.class
+com\misaka\dubbo\domain\User.class

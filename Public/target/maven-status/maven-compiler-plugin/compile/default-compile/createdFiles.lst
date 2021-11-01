@@ -1,0 +1,4 @@
+COM\PROVIDER\Domain\User.class
+COM\PROVIDER\Service\UserService.class
+COM\PROVIDER\Dao\UserDao.class
+COM\PROVIDER\Service\UserServiceImpl.class

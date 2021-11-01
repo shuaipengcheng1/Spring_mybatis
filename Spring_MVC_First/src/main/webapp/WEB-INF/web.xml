@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!--    注册mvc的dispatcherServlet
+         我们需要在服务器启动后就创建该对象
+           为什么要创建呢??
+            因为该对象会在创建过程中读取springmvc的配置文件
+              并且创建spring容器
+                最后把WebApplicationContext对象 存放在 web的ServletContext对象中
+        -->
+
+
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--  在tomcat启动后 就创建对象
+            该标签的值 表示创建对象的顺序
+              值越小 优先级就越高-->
+        <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:Springmvc.xml</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+<!--        *。do 表示如果访问的是  http://xxx/xxx.do 就把这次请请求交给springmvc这个servlet处理-->
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+<!--    声明过滤器-->
+    <filter>
+        <filter-name>spring_filter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+<!--   设置要使用的编码-->
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+<!--        使请求对象 强制使用ust-8-->
+        <init-param>
+            <param-name>forceRequestEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceResponseEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>spring_filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>
